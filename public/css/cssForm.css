@@ -1,0 +1,85 @@
+.form-eventos {
+    background: rgba(0, 0, 255, 0.1);
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#banner {
+    height: 100%;
+    width: 100%;
+}
+
+.imgevento{
+    position: fixed;
+    height: 150px;
+    width: 250px;    
+    right: 20px;
+    top:50px;    
+}
+    
+.nomeevento {    
+    height: 2vw;;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    padding: 1%;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+
+.form-box {
+    width: 70%;
+    background: rgba(255, 255, 255, 0.8);
+    font-family: 'Roboto', sans-serif;
+    padding-top: 4%;
+    padding-bottom: 3%;
+    -webkit-box-shadow: 13px 13px 4px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 13px 13px 4px 0px rgba(0, 0, 0, 0.75);
+}
+
+.form-box li {
+    width: 90%;
+    margin: auto;
+}
+
+.form-box h1 {
+    text-align: center;
+}
+
+.inp {
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px 0 5px 0px;
+}
+
+.form-button {
+    padding-top: 1%;
+    text-align: center;
+}
+
+.button {
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Responsivisss 
+
+@media screen and (max-width: 600px) {
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+*/

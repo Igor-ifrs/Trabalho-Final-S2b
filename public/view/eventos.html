@@ -1,0 +1,99 @@
+<div class="setores">
+
+<div id="container-lista" >
+
+        <div id="pesquisa">
+            <h1>Pesquise um evento com o seu perfil</h1>
+            <div class="pesquisas">
+
+                <div class="pesquisa-input">
+                    <label for="nome">Nome :</label>
+                    <input type="search" ng-model="search.Nome" placeholder=" Ex. : Festa Junina">
+                </div>
+
+                <div class="pesquisa-input">
+                    <label for="local">Local :</label>
+                    <input type="search" ng-model="search.Local.name" placeholder=" Ex. : PUCRS">
+                </div>
+
+                <div class="pesquisa-input">
+                    <label for="tipoe">Tipo :</label>
+                    <select ng-model="search.Tipo">
+                        <option value="" selected>Selecione</option>
+                        <option value="Teatro">Teatro</option>
+                        <option value="Musica">Música</option>
+                        <option value="Dança">Dança</option>
+                        <option value="Palestra">Palestra</option>
+                        <option value="Mostra">Mostra de Arte</option>
+                        <option value="Livro">Livro e Leitura</option>
+                        <option value="Coquetel">Coquetel</option>
+                        <option value="Cinema">Cinema</option>
+                        <option value="Festa">Festa</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-todos-eventos" >
+
+            <div class="container-evento" ng-repeat="evento in eventos | filter: search">
+
+                <div class="container-nn">
+                    <h1>{{evento.Nome}}</h1>
+                </div>
+
+                <div class="box-ll">
+                    <a class="box-link" href="#!/escolhido/{{evento._id}}">
+
+                        <div>
+                            <h3>Período</h3>
+                            <p>&#128197; {{evento.DataInicial | date:'dd/MM/yyyy'}}</p>
+                            <p>&#128338; {{evento.DataInicial | date:'HH:mm'}}</p>
+                            <h3>Local</h3>
+                            <p>{{evento.Local.name}}</p>
+                        </div>
+
+                        <div class="img-banner-lista">
+                            <img  src="{{evento.linkImg}}" alt="Banner de {{evento.Nome}}"/>
+                        </div>
+
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        <!--container eventos -->
+
+    </div>
+</div>
+
+
+<!--
+patrocinados
+
+        <div>
+            <ul style='border: 5px solid red' ng-repeat="Pat in patro | filter: search">
+                <a href="#!/escolhido/{{Pat._id}}">
+                    <img id="banner" src="{{Pat.linkImg}}" alt="Banner de {{Pat.Nome}}">
+                    <li>
+                        <h3>Nome</h3>
+                        <p>{{Pat.Nome}}</p>
+                    </li>
+                    <li>
+                        <h3>Inicio</h3>
+                        <p>&#128197; {{Pat.DataInicial | date:'dd/MM/yyyy'}}</p>
+                        <p>&#128338; {{Pat.DataInicial | date:'HH:mm'}}</p>
+                    </li>
+                    <h3>Local</h3>
+                    <p>{{Pat.Local.name}}</p>
+                </a>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+-->

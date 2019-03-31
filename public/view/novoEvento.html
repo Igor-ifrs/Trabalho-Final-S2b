@@ -1,0 +1,71 @@
+<div class="setores">
+
+    <div class="form-eventos">
+
+       
+<!--
+        <div class="imgevento">
+            <img id="banner" src="{{evento.linkImg}}" >
+        </div>
+ -->
+        <div class="form-box">
+            <h1>CRIE SEU EVENTO 🎉</h1>
+            <form>
+                <ul>
+                    <li>
+
+                        <label for="nomeEvento">Nome do evento</label>
+                        <input class="inp" type="text" ng-model="evento.Nome" ng-required="true" placeholder="ex.: Festa Junina">
+
+                    </li>
+                    <li>
+                        <label for="email">E-mail de Contato</label>
+                        <input class="inp" type="email" ng-model="evento.Email" ng-required="true" placeholder="ex.: nome@exemplo.com.br">
+                    </li>
+                    <li>
+                        <label for="banner">Banner de Apresentação (link)</label>
+                        <input class="inp" type="text" ng-model="evento.linkImg" ng-required="true" placeholder="http://imagem.com/teste">
+                    </li>
+                    <li>
+
+                    </li>
+                    <li>
+                        <label for="datainicial">Data Inicial</label>
+                        <input class="inp" type="datetime-local" ng-model="evento.DataInicial" ng-required="true">
+                    </li>
+                    <li>
+                        <label for="datafinal">Data Final</label>
+                        <input class="inp" type="datetime-local" ng-model="evento.DataFinal" ng-required="true">
+                    </li>
+                    <li>
+                        <label for="local">Local do Evento</label>
+                        <select class="inp" ng-model="evento.Local" ng-options="local.name for local in locais | orderBy:'name'" required></select>
+                    </li>
+                    <li>
+                        <label for="tipoevento">Tipo de Evento</label>
+                        <select ng-model="evento.Tipo" ng-options="local for local in evento.Local.categoria | orderBy: 'local.categoria'" required></select>
+                    </li>
+
+                    <li>
+                        <h2>Descrição do evento</h2>
+                        <textarea class="inp" type="textarea" ng-model="evento.Observacao" id="obs" ng-required="true" placeholder="Descrição completa sobre o Evento"></textarea>
+                        <div class="form-button">
+                            <input type="submit" id="enviar" class="button" value="Enviar" ng-click="adicionarEvento(evento)">
+                            <input type="reset" id="reset" class="button" value="Limpar">
+                        </div>
+                    </li>
+                </ul>
+<div class="nomeevento">{{evento.Nome}}</div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <!--
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcQjTkCtas62nUvNHFVuJjKpgezBXAVXo"></script>
+
+-->
+
+</div>

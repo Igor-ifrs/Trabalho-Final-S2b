@@ -1,0 +1,42 @@
+<div class="setores">
+
+    <div class="flex-container">
+        <h1>{{escolhido.Nome}}</h1>
+
+        <h3>E-mail</h3>
+        <p>{{escolhido.Email}}</p>
+
+        <h3>Categoria</h3>
+        <p>{{escolhido.Tipo}}</p>
+
+        <h3>Local</h3>
+        <p>{{escolhido.Local.name}}</p>
+        <p>{{escolhido.Local.enderecoFormatado}}</p>
+
+        <h3>Período</h3>
+        <p>&#128197; {{escolhido.DataInicial | date:'dd/MM/yyyy'}}</p>
+        <p>&#128338; {{escolhido.DataInicial | date:'HH:mm'}}</p>
+
+        <p>&#128197; {{escolhido.DataFinal | date:'dd/MM/yyyy'}}</p>
+        <p>&#128338; {{escolhido.DataFinal | date:'HH:mm'}}</p>
+
+        <p style="padding: 10px;">{{escolhido.Observacao}}</p>
+        <img style="width: 50%; height: 300px;" src="{{escolhido.linkImg}}" alt="Banner de {{escolhido.Nome}}">
+
+        <div id="mapEscol" style="width: 50%;float: right;height: 300px;">
+
+        </div>
+    </div>
+
+</div>
+
+<div>
+
+
+</div>
+
+
+
+
+
+

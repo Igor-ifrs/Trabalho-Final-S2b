@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<meta charset="utf-8" />
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #map {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #fg {
+            background: tomato;
+            padding: 5px;
+            position: absolute;
+            top: 0;
+            z-index: 99999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fg">Faz de conta que esse Link é dinamico...
+        <a id="locall" href="#">Av Brasil, 1523 Porto Alegre, RS 90230-060</a>
+    </div>
+    <div id="map"></div>    
+
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 18,
+                center: {
+                    lat: -34.397,
+                    lng: 150.644
+                }
+            });
+            const geocoder = new google.maps.Geocoder();
+
+            document.getElementById('locall').addEventListener('click', function () {
+                geocodeAddress(geocoder, map);
+            });
+        }
+
+        function geocodeAddress(geocoder, resultsMap) {
+            let enderecoo = document.getElementById('locall').innerText;
+            geocoder.geocode({
+                'address': enderecoo
+            }, function (results, status) {
+                if (status === 'OK') {
+                    resultsMap.setCenter(results[0].geometry.location);
+                    let marker = new google.maps.Marker({
+                        map: resultsMap,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    alert('Deu ruim!!!' + status);
+                }
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcQjTkCtas62nUvNHFVuJjKpgezBXAVXo&callback=initMap"></script>
+</body>
+</html>

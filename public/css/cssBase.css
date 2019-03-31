@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*font-family: 'Raleway', sans-serif;
+
+font-family: "Lucida Console",
+Monaco,
+monospace;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    height: 100%;
+    font-family: 'Raleway', sans-serif
+}
+
+body {
+    background-image: url('escadarias_porto-alegre_borges.png');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+#main {
+    height: 100%;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:visited {
+    color:white ;
+}
+a:target{
+    color: white;
+}
+
+nav h1 {
+    margin: auto;
+    margin-left: 2%;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+nav h1:hover {
+    color: gray;
+}
+
+#logo {
+    width: 30%;
+}
+
+.setores {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.sobre {
+    width: 60%;
+    color: white;
+    -webkit-transition: all .3s linear .3s;
+    -webkit-transition: all .3s linear .3s;
+    transition: all .3s linear .3s
+}
+
+.sobre h1 {
+    text-align: center;
+    font-size: 7rem;
+    border-bottom: 3px solid white;
+}
+
+.sobre h3 {
+    text-align: center;
+    padding: 2%
+}
+
+.sobre p {
+    padding: 1%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    background:rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.dados {
+    padding: 4%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.dados a {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.dados a:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*.grow { transition: all .2s ease-in-out; }
+
+
+*/
+
+#G {
+    position: fixed;
+    right: 5px;
+    top: 70px;
+    color: white;
+    cursor: pointer;
+    z-index: 999;
+    ;
+}
+
+#G:hover::before {
+    content: 'LOGADO';
+    position: absolute;
+    top: 20px;
+}
+
+footer {
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+footer:hover {
+    padding: 1%;
+}
+
+#destaques {
+    background: greenyellow;
+}
+
+#container-lista {
+    height: inherit;
+    width: 100%;
+}
+
+.pesquisas {
+    font-family: 'Raleway', sans-serif !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.pesquisa-input {
+    width: calc(100% / 3);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2vw;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.pesquisa-input input[type="search"] {
+    color: rgba(255, 255, 255, 0.8);
+    outline: none;
+    background: transparent;
+    border: none;
+    height: 50px;
+    width: 60%;
+    font-size: 1.5vw;
+}
+
+.pesquisa-input input[type="search"]::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5vw;
+}
+
+.pesquisa-input select {
+    background: transparent;
+    border: none !important;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+#pesquisa {
+    margin: 30px;
+}
+
+#pesquisa h1 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 3vw;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    text-shadow: #000 1px -1px 2px, #000 -1px 1px 2px, #000 1px 1px 2px, #000 -1px -1px 2px
+}
+
+.container-todos-eventos {
+    padding: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.container-evento {
+    border: 1px solid rgb(255, 255, 255);
+    width: 49%;
+    min-width: 400px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.9);
+    box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.9);
+    padding: 10px;
+}
+
+.container-nn {
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.img-banner-lista img {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.box-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 20px;
+    line-height: 30px;
+}
+
+.box-ll {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+
+.img-banner-lista {
+    height: 200px;
+    width: 300px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.img-banner-lista img {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-container {
+    height: 80vh;
+    width: 80vw;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.flex-container h1 {
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: #000 1px -1px 2px, #000 -1px 1px 2px, #000 1px 1px 2px, #000 -1px -1px 2px
+}
+
+.flex-container h3, p{
+    font-family: 'Roboto', sans-serif;
+    
+    padding: 2px;
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .container-todos-eventos {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+#mapaHome{        
+    height: 80%;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.4)
+}
+
+.ev-cv{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background: rgba(255, 0, 0, 0.5);
+    z-index: 99999;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+                border-radius: 50%;
+   color: rgb(255, 255, 255);  
+   font-size: 30px;   
+   -webkit-transform: rotate(-20deg);   
+           transform: rotate(-20deg);
+           left: 65px;
+}
+.ev-cv+.ev-cv{
+    left: 300px;
+}
+.ev-cv:hover::before {
+    content: 'EVENTOS CADASTRADOS';
+}
+.ev-cv+.ev-cv:hover::before{
+    content: 'LOCAIS DISPONIVEIS';
+    position: absolute;
+   left: 0
+}
+#mapEscol{
+    background-image: url('../img/pin.jpg');
+    background-size: cover;
+}

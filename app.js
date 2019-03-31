@@ -9,7 +9,7 @@ const indexRouter = require('./routes/index'); //depois limpar
 
 const apiRouter = require('./routes/api');
 // MongoDb ok!
-const connection = require('./data/connection');
+const connection = require('./data/connection/connection');
 
 const app = express();
 // Só para testes
@@ -21,7 +21,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(express.static(path.join(__dirname, 'public/view')));
+app.use(favicon(path.join(__dirname, 'public', 'POA-na-rua.png')))
 
 app.use('/', indexRouter);//depois limpar
 

@@ -88,4 +88,6 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
   console.log('Servidor rodando na porta '+ addr.port );  
+  console.log('##################################____NOVA VERSAO da API 0.1.1_____##################################');
+  //console.log('#####################################################################################################');
 }
